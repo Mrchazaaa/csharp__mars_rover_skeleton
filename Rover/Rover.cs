@@ -27,6 +27,16 @@ public sealed class Rover
 
                 this.direction = newDirection;
                 break;
+            case Command.R:
+                var newRightDirection = this.direction + 1;
+                
+                if ((int)newRightDirection == 4)
+                {
+                    newRightDirection = Direction.North;
+                }
+
+                this.direction = newRightDirection;
+                break;
             case Command.F:
                 switch (this.direction)
                 {

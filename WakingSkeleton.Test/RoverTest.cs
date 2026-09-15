@@ -45,6 +45,10 @@ public class Tests
     [TestCase(Command.L, Direction.East, Direction.North)]
     [TestCase(Command.L, Direction.South, Direction.East)]
     [TestCase(Command.L, Direction.West, Direction.South)]
+    [TestCase(Command.R, Direction.North, Direction.East)]
+    [TestCase(Command.R, Direction.East, Direction.South)]
+    [TestCase(Command.R, Direction.South, Direction.West)]
+    [TestCase(Command.R, Direction.West, Direction.North)]
     public void RotatingRover(Command command, Direction startingDirection, Direction targetDirection)
     {
         var rover = new Rover(1, 1, startingDirection);
