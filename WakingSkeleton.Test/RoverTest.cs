@@ -23,6 +23,9 @@ public class Tests
 
     [Test]
     [TestCase(Direction.North, 1, 2)]
+    [TestCase(Direction.West, 0, 1)]
+    [TestCase(Direction.East, 2, 1)]
+    [TestCase(Direction.South, 1, 0)]
     public void MovingRoverForwardMovesForwardByOne(Direction startingDirection, int expectedX, int expectedY)
     {
         var rover = new Rover(1, 1, startingDirection);
