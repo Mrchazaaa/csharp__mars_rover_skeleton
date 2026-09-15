@@ -22,13 +22,14 @@ public class Tests
     }
 
     [Test]
-    public void MovingRoverForwardMovesForwardByOne()
+    [TestCase(Direction.North, 1, 2)]
+    public void MovingRoverForwardMovesForwardByOne(Direction startingDirection, int expectedX, int expectedY)
     {
-        var rover = new Rover(1, 1, Direction.North);
+        var rover = new Rover(1, 1, startingDirection);
 
         rover.ReceiveCommand();
 
-        Assert.That(rover.x, Is.EqualTo(1));
-        Assert.That(rover.y, Is.EqualTo(2));
+        Assert.That(rover.x, Is.EqualTo(expectedX));
+        Assert.That(rover.y, Is.EqualTo(expectedY));
     }
 }
