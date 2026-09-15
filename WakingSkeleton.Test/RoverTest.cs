@@ -18,7 +18,7 @@ public class Tests
 
         Assert.That(rover.x, Is.EqualTo(x));
         Assert.That(rover.y, Is.EqualTo(y));
-        Assert.That(rover.Direction, Is.EqualTo(direction));
+        Assert.That(rover.direction, Is.EqualTo(direction));
     }
 
     [Test]
@@ -51,6 +51,6 @@ public class Tests
 
         rover.ReceiveCommand(command);
 
-        Assert.That(rover.Direction, Is.EqualTo(targetDirection));
+        Assert.That(rover.direction, Is.EqualTo(targetDirection));
     }
 }

@@ -4,13 +4,13 @@ public sealed class Rover
 {
     public int x;
     public int y;
-    public Direction Direction;
+    public Direction direction;
 
     public Rover(int x, int y, Direction direction)
     {
         this.x = x;
         this.y = y;
-        this.Direction = direction;
+        this.direction = direction;
     }
 
     public void ReceiveCommand(Command command)
@@ -18,17 +18,17 @@ public sealed class Rover
         switch (command)
         {
             case Command.L:
-                var newDirection = this.Direction - 1;
+                var newDirection = this.direction - 1;
                 
                 if ((int)newDirection == -1)
                 {
                     newDirection = Direction.West;
                 }
 
-                this.Direction = newDirection;
+                this.direction = newDirection;
                 break;
             case Command.F:
-                switch (this.Direction)
+                switch (this.direction)
                 {
                     case Direction.North:
                         this.y = 2;
@@ -45,7 +45,7 @@ public sealed class Rover
                 }
                 break;
             case Command.B:
-                switch (this.Direction)
+                switch (this.direction)
                 {
                     case Direction.North:
                         this.y = 0;
