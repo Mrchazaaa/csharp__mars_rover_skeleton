@@ -1,26 +1,15 @@
 namespace WakingSkeleton.Test;
 
+using Rover;
+
 public class Tests
 {
-    public class Rover {
-        public int x;
-        public int y;
-        public string direction;
-
-        public Rover(int x, int y, string direction) {
-          this.x = x;
-          this.y = y;
-          this.direction = direction;
-        }
-    }
-
-
     [Test]
     public void InitializingRoverSetsPosition()
     {
         var x = 2;
         var y = 3;
-        var direction = "North";
+        var direction = Direction.North;
 
         var rover = new Rover(
             x,
@@ -29,6 +18,17 @@ public class Tests
 
         Assert.That(rover.x, Is.EqualTo(x));
         Assert.That(rover.y, Is.EqualTo(y));
-        Assert.That(rover.direction, Is.EqualTo(direction));
+        Assert.That(rover.Direction, Is.EqualTo(direction));
+    }
+
+    [Test]
+    public void MovingRoverForwardMovesForwardByOne()
+    {
+        var rover = new Rover(1, 1, Direction.North);
+
+        rover.ReceiveCommand();
+
+        Assert.That(rover.x, Is.EqualTo(1));
+        Assert.That(rover.y, Is.EqualTo(2));
     }
 }
