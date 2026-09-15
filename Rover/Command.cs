@@ -3,5 +3,7 @@
 public enum Command
 {
     F,
-    B
+    B,
+    L,
+    R
 }

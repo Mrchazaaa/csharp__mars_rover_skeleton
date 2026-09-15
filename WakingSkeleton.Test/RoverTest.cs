@@ -30,7 +30,7 @@ public class Tests
     [TestCase(Command.B, Direction.East, 0, 1)]
     [TestCase(Command.B, Direction.South, 1, 2)]
     [TestCase(Command.B, Direction.West, 2, 1)]
-    public void MovingRoverForwardMovesByOne(Command command, Direction startingDirection, int expectedX, int expectedY)
+    public void MovingRoverMovesByOne(Command command, Direction startingDirection, int expectedX, int expectedY)
     {
         var rover = new Rover(1, 1, startingDirection);
 
@@ -38,5 +38,19 @@ public class Tests
 
         Assert.That(rover.x, Is.EqualTo(expectedX));
         Assert.That(rover.y, Is.EqualTo(expectedY));
+    }
+
+    [Test]
+    [TestCase(Command.L, Direction.North, Direction.West)]
+    [TestCase(Command.L, Direction.East, Direction.North)]
+    [TestCase(Command.L, Direction.South, Direction.East)]
+    [TestCase(Command.L, Direction.West, Direction.South)]
+    public void RotatingRover(Command command, Direction startingDirection, Direction targetDirection)
+    {
+        var rover = new Rover(1, 1, startingDirection);
+
+        rover.ReceiveCommand(command);
+
+        Assert.That(rover.Direction, Is.EqualTo(targetDirection));
     }
 }
