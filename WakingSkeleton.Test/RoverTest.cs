@@ -22,15 +22,15 @@ public class Tests
     }
 
     [Test]
-    [TestCase(Direction.North, 1, 2, Command.F)]
-    [TestCase(Direction.East, 2, 1, Command.F)]
-    [TestCase(Direction.South, 1, 0, Command.F)]
-    [TestCase(Direction.West, 0, 1, Command.F)]
-    [TestCase(Direction.North, 1, 0, Command.B)]
-    [TestCase(Direction.East, 0, 1, Command.B)]
-    [TestCase(Direction.South, 1, 2, Command.B)]
-    [TestCase(Direction.West, 2, 1, Command.B)]
-    public void MovingRoverForwardMovesByOne(Direction startingDirection, int expectedX, int expectedY, Command command)
+    [TestCase(Command.F, Direction.North, 1, 2)]
+    [TestCase(Command.F, Direction.East, 2, 1)]
+    [TestCase(Command.F, Direction.South, 1, 0)]
+    [TestCase(Command.F, Direction.West, 0, 1)]
+    [TestCase(Command.B, Direction.North, 1, 0)]
+    [TestCase(Command.B, Direction.East, 0, 1)]
+    [TestCase(Command.B, Direction.South, 1, 2)]
+    [TestCase(Command.B, Direction.West, 2, 1)]
+    public void MovingRoverForwardMovesByOne(Command command, Direction startingDirection, int expectedX, int expectedY)
     {
         var rover = new Rover(1, 1, startingDirection);
 
