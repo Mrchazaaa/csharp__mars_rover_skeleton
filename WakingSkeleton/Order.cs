@@ -1,6 +1,9 @@
 namespace WakingSkeleton;
 
-public interface IProduct;
+public interface IProduct
+{
+    void Hold();
+}
 
 public class Order
 {
@@ -14,5 +17,6 @@ public class Order
     public void AddItem(IProduct item)
     {
         Items = Items.Append(item);
+        item.Hold();
     }
 }

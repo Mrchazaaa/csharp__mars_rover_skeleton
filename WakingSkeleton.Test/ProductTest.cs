@@ -8,7 +8,7 @@ public class ProductTest
     [Test]
     public void HoldingProductHoldsStock()
     {
-        var product = new Product();
+        var product = new Product(100, "test", 10, 0);
 
         product.Hold();
 
