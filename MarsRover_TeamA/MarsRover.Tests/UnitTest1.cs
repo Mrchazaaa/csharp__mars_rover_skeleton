@@ -13,7 +13,7 @@ public class MarsRoverTests
     [Test]
     public void InitializingAtSpecifiedPosition()
     {
-        Rover rover = new Rover(4, 7, RoverDirection.North);
+        Rover rover = new Rover(4, 7, "N");
         Assert.That(rover.PositionX, Is.EqualTo(4));
         Assert.That(rover.PositionY, Is.EqualTo(7));
         Assert.That(rover.Direction, Is.EqualTo(RoverDirection.North));
