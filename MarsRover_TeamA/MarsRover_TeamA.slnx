@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="MarsRover.Tests/MarsRover.Tests.csproj" Id="2a29fc32-8b3f-43d9-b8b0-021398a48682" />
   <Project Path="MarsRover_TeamA/MarsRover_TeamA.csproj" />
 </Solution>
