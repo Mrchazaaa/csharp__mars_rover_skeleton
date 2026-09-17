@@ -26,4 +26,16 @@ public class MarsRoverTests
         Assert.That(rover.PositionY, Is.EqualTo(y));
         Assert.That(rover.Direction, Is.EqualTo(expectedDirection));
     }
+
+    [Test]
+    public void MovingForwardMovesForward()
+    {
+        var rover = new Rover(3, 2, "N");
+
+        rover.MoveForward();
+
+        Assert.That(rover.PositionX, Is.EqualTo(3));
+        Assert.That(rover.PositionY, Is.EqualTo(3));
+        Assert.That(rover.Direction, Is.EqualTo(RoverDirection.North));
+    }
 }

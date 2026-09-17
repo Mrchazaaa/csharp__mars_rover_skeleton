@@ -36,4 +36,12 @@ public class Rover
                 throw new ArgumentException("not recognized");
         }
     }
+
+    public void MoveForward()
+    {
+        if (this.Direction == RoverDirection.North)
+        {
+            this.PositionY += 1;
+        }
+    }
 }
