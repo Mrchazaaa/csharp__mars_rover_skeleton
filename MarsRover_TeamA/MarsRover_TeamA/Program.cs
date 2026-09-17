@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the Mars Rover Program!");
-        Console.WriteLine("Please enter your initial position in formate X,Y D (e.g., 1,2 N)");
+        Console.WriteLine("please enter initial coordinates and direction for rover (e.g., 1,2 N)");
         var initalInput = Console.ReadLine();
         var parameters = initalInput.Split(" ");
         var coordinates = parameters[0].Split(",");
