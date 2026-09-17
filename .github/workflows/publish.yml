@@ -1,0 +1,20 @@
+name: publish
+
+on:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: dotnet publish MarsRover_TeamA/MarsRover_TeamA/MarsRover_TeamA.csproj -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o out
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: out/MarsRover_TeamA.exe
