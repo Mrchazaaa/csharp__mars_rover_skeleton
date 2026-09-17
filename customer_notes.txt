@@ -1,0 +1,31 @@
+- What do you want:
+A I want to be able to control the rover from my computer
+
+I want to be able to initialize the rover at a point in the grid
+control it in real time, facing a certain direction
+
+turn left/right/forward/backwards F/B/R/left
+
+Send a string
+
+shows you where the rover is at the end 
+
+needs a way to exit
+
+fixed grid => 100x100 [0..99,0..99]
+
+wrapping around map should be same as in spec (north/south wrapping fiddlyness)
+
+
+Deployment:
+put solution in folder (could clone it)
+dont install anything ()
+
+UI:
+TUI is fine, not any particular stuff
+Just end state of movement string is acceptable. We dont need to animate the
+sequence moving.
+
+.Net6 is installed on the target machine (maybe troubleshooting script?)
+
+
