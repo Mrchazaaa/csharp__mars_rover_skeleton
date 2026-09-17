@@ -1,3 +1,4 @@
+[![test](https://github.com/Mrchazaaa/csharp__mars_rover_skeleton/actions/workflows/run-tests.yml/badge.svg)](https://github.com/Mrchazaaa/csharp__mars_rover_skeleton/actions/workflows/run-tests.yml)
 [![publish](https://github.com/Mrchazaaa/csharp__mars_rover_skeleton/actions/workflows/publish.yml/badge.svg)](https://github.com/Mrchazaaa/csharp__mars_rover_skeleton/actions/workflows/publish.yml)
 
 # Team A rover
